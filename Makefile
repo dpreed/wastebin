@@ -13,7 +13,6 @@ CPPFLAGS ?= $(INC_FLAGS) -MMD -MP
 
 $(TARGET): $(OBJS)
 	$(CC) $(LDFLAGS) $(OBJS) -o $@ $(LDLIBS)
-	sudo setcap 'cap_ipc_lock=eip' $(TARGET)
 
 .PHONY: clean
 clean:
